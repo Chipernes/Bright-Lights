@@ -1,0 +1,172 @@
+/*Zeroing*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  transition: 0.3s;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/*---Variables-----------------------------*/
+/* Colors */
+/* Font size */
+/* Font family */
+/*----wrapper----------------------------------*/
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+/*----_container-----------------------------*/
+._container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/*----HEADER------------------------------*/
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background: url("../images/header/background.jpg") center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__logo:hover {
+  filter: drop-shadow(0 0 10px #7A66CC);
+}
+
+.menu__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 55px;
+}
+
+.menu__link {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 150%;
+  color: #ffffff;
+}
+.menu__link:hover {
+  color: rgb(201, 190, 250);
+  filter: drop-shadow(0 0 10px #7A66CC);
+}
+
+.header__burger {
+  display: none;
+}
+.header__burger img {
+  width: 60px;
+}
+
+@media (max-width: 650px) {
+  .header__burger {
+    display: block;
+  }
+  .menu__list {
+    display: none;
+  }
+  .header__container {
+    gap: 10px;
+  }
+}
+.main-block__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
