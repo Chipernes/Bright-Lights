@@ -5,48 +5,121 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/style.css">
     <title>Bright Lights</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="header__container _container">
-          <a class="header__logo" href="index.html">
-            <img class="menu__logo_img" src="images/header/logo-icon.png" alt="Logo icon">
-            <img class="menu__logo_title" src="images/header/logo-title.png" alt="Logo title">
+      <!--=============== HEADER ===============-->
+      <header class="header" id="header">
+        <nav class="nav _container">
+          <a class="nav__logo" href="index.html">
+            <img class="nav__logo_img" src="images/header/logo-icon.png" alt="Logo icon">
+            <img class="nav__logo_title" src="images/header/logo-title.png" alt="Logo title">
           </a>
-          <nav class="header__menu menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="#">About</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">News</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Music</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Media</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Tours</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__burger">
+          
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">News</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Music</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Media</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Tours</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Contacts</a>
+            </li>
+          </ul>
+    
+          <button class="nav__burger">
             <img src="images/header/burger-menu.svg" alt="Burger menu">
-          </div>
-        </div>
+          </button>
+        </nav>
       </header>
+      <main>
+        <!--=============== HOME ===============-->
+        <section class="home">
+          <img class="home__img" src="images/home/background.jpg" alt="">
+          <div class="home__container _container">
+            <div class="home__data">
+              <h1 class="home__data-subtitle">New Single</h1>
+              <h1 class="home__data-title">War For Love</h1>
+            </div>
+  
+            <div class="home__player">
+              <img class="home__player-img" src="images/home/play.svg" alt="Play">
+              <hr class="home__player-line">
+              <hr class="home__player-line-playing">
+              <p class="home__player-time">00:22-02:54</p>
+            </div>
+          </div>
+        </section>
+  
+        <!--=============== INFO CARDS ===============-->
+        <section class="cards">
+          <div class="cards__container _container">
+            <div class="cards__block">
+              <img class="cards__block-img" src="images/cards/working.png" alt="Working">
+              <p class="cards__block-text">Working on my upcoming full-lenth album that`s releasing later this year.</p>
+            </div>
+  
+            <div class="cards__block">
+              <img class="cards__block-img" src="images/cards/album.png" alt="Working">
+              <p class="cards__block-text">Halloween vibes. <br> Listen my new track!</p>
+            </div>
+  
+            <div class="cards__block">
+              <img class="cards__block-img" src="images/cards/stream.png" alt="Working">
+              <p class="cards__block-text">WarForLove is OUT NOW!! <br> Stream it here!</p>
+            </div>
+          </div>
+        </section>
+  
+        <!--=============== ABOUT ===============-->
+        <section class="about">
+          <div class="about__container _container">
+            <div class="about__description">
+              <h2 class="about__description-title">Bright Lights</h2>
+              <p class="about__description-text">
+                Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and record producer. She has written for numerous
+                pop stars including Britney Spears, Justin Bieber, Usher and Beyoncé. Her catalog has amassed over 1 billion streams worldwide. More than 100 million of those streams can be attributed to her artist career and include such hits as Porter Robinson's "Language," 3LAU's "How You Love Me" and her own single "Runaway." She was also a featured vocalist on Zedd's #1 Clarity album. Her latest music video, "Put It Down," reached 1 million streams in the first week, releasing independently. Bright Lights is currently in the studio working on a self-produced album slated for release in 2020.
+              </p>
+              
+              <div class="about__description-points">
+                <div>
+                  <h2>Based in: Los Angeles</h2>
+                  <h2>Genre: #DancePop</h2>
+                </div>
+                <div>
+                  <h2>Founded in 2011</h2>
+                  <h2>Label: 333 Recordings</h2>
+                </div>
+              </div>
+            </div>
+            
+            <div class="about__photos">
+              <img class="about__photos-bright" src="images/about/bright.png" alt="Bright">
+              <img class="about__photos-car" src="images/about/car.png" alt="Car">
+            </div>
+          </div>
+        </section>
+        
+        
+        <section></section>
+      </main>
+      <footer></footer>
+      
     </div>
+  
+    <script src="main.js"></script>
   </body>
 </html>
