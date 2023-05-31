@@ -343,7 +343,6 @@ h1, h2, h3 {
 /*=============== ABOUT ===============*/
 .about {
   margin-top: 11.25rem;
-  margin-bottom: 200px;
 }
 .about__container {
   display: flex;
@@ -426,6 +425,81 @@ h1, h2, h3 {
   left: 95px;
   z-index: -1;
   border-radius: 1.25em 0 1.25em 0;
+}
+
+/*=============== QUOTE ===============*/
+.quote {
+  margin-top: 14.4rem;
+  margin-bottom: 200px;
+}
+.quote__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 50px 80px;
+  border: 1px solid var(--white-color);
+  border-radius: 1.25em 0 1.25em 0;
+}
+.quote__inner-text {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  font-size: var(--h3-font-size);
+  line-height: 150%;
+}
+.quote__inner-text::before {
+  content: url("../images/quote/quotes.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.quote__inner-line {
+  width: 100%;
+  height: 1px;
+  margin: 25px 0;
+  background-color: var(--white-color);
+  opacity: 0.6;
+  border: none;
+}
+.quote__inner-author {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+  color: var(--primary-1);
+}
+.quote__inner-author:hover {
+  color: var(--white-color);
+  filter: drop-shadow(0 0 5px var(--primary-1));
+}
+.quote__photo {
+  position: relative;
+  width: 100%;
+  max-width: 370px;
+}
+.quote__photo-img {
+  width: 100%;
+  max-width: 370px;
+  height: 480px;
+  position: absolute;
+  top: calc(50% - 240px);
+  left: 0;
+  border-radius: 1.25em 0 1.25em 0;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .quote__container {
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 40px;
+  }
+  .quote__photo {
+    height: 300px;
+  }
+  .quote__photo-img {
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
