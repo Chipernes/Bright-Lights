@@ -342,7 +342,7 @@ h1, h2, h3 {
 
 /*=============== ABOUT ===============*/
 .about {
-  margin-top: 11.25rem;
+  padding-top: 11.25rem;
 }
 .about__container {
   display: flex;
@@ -429,8 +429,7 @@ h1, h2, h3 {
 
 /*=============== QUOTE ===============*/
 .quote {
-  margin-top: 14.4rem;
-  margin-bottom: 200px;
+  padding-top: 14.4rem;
 }
 .quote__container {
   display: flex;
@@ -500,6 +499,152 @@ h1, h2, h3 {
     object-fit: cover;
     object-position: top left;
   }
+}
+
+/*=============== TRACKS ===============*/
+.tracks {
+  padding-top: 14.4rem;
+  margin-bottom: 200px;
+}
+.tracks__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+@media (max-width: 1200px) {
+  .tracks__container {
+    justify-content: center;
+  }
+}
+.tracks-img {
+  width: 100%;
+  max-width: 430px;
+  height: 100%;
+  border-radius: 50%;
+  border: 18px solid rgba(122, 102, 204, 0.6);
+  outline: 18px solid rgba(122, 102, 204, 0.3);
+}
+.tracks__title {
+  position: relative;
+  margin-left: 100px;
+  font-size: var(--h1-font-size);
+}
+.tracks__title:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 15px);
+  left: -100px;
+  width: 65px;
+  height: 30px;
+  background: url("../images/tracks/lines.svg") center;
+  background-size: cover;
+}
+.tracks__player {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+  margin: 60px 0 50px 0;
+}
+.tracks__player-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--white-color);
+  border: none;
+}
+.tracks__player-line-playing {
+  position: absolute;
+  overflow: visible;
+  left: 66px;
+  width: 12.5%;
+  height: 2px;
+  background-color: var(--primary-1);
+  border: none;
+}
+.tracks__player-line-playing::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 100%;
+  width: 2px;
+  height: 20px;
+  background-color: var(--primary-1);
+}
+.tracks__player-time {
+  white-space: nowrap;
+  font-weight: var(--font-medium);
+}
+@media (max-width: 425px) {
+  .tracks__player {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .tracks__player-line {
+    order: -1;
+  }
+  .tracks__player-line-playing {
+    top: 0;
+    left: 0;
+  }
+}
+.tracks__next-music p {
+  font-size: var(--h3-font-size);
+  line-height: 150%;
+}
+.tracks__next-music p:not(:last-child) {
+  margin-bottom: 20px;
+}
+.tracks__next-music p:first-child {
+  font-weight: var(--font-semi-bold);
+  color: var(--primary-1);
+}
+.tracks__next-music span {
+  margin-right: 20px;
+  font-size: 0.8rem;
+  font-weight: var(--font-bold);
+  color: var(--white-color);
+  opacity: 0.5;
+}
+.tracks__streaming {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 50px;
+}
+.tracks__streaming h2 {
+  font-size: var(--h2-font-size);
+}
+.tracks__streaming a {
+  position: relative;
+  padding-left: 40px;
+  color: var(--white-color);
+}
+.tracks__streaming a:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px var(--primary-1));
+  transform: scale(1.05);
+}
+.tracks__streaming-spotify::before {
+  content: url("../images/tracks/spotify.svg");
+  position: absolute;
+  top: -7.5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+.tracks__streaming-iTunes::before {
+  content: url("../images/tracks/iTunes.svg");
+  position: absolute;
+  top: -7.5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
