@@ -33,10 +33,10 @@
               <a class="nav__link" href="#media">Media</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Tours</a>
+              <a class="nav__link" href="#tours">Tours</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Contacts</a>
+              <a class="nav__link" href="#contacts">Contacts</a>
             </li>
           </ul>
     
@@ -45,9 +45,10 @@
           </button>
         </nav>
       </header>
+      
       <main>
         <!--=============== HOME ===============-->
-        <section class="home">
+        <section class="home" id="home">
           <img class="home__img" src="images/home/background.jpg" alt="">
           <div class="home__container _container">
             <div class="home__data">
@@ -197,12 +198,73 @@
             </div>
           </div>
         </section>
+  
+  
+        <!--=============== TOURS ===============-->
+        <section class="tours" id="tours">
+          <div class="tours__container _container">
+            <div class="tours__card">
+              <img class="tours__card-img" src="images/tours/chandler.png" alt="Chandler">
+              <h3 class="tours__card-place">Chandler, AZ</h3>
+              <p class="tours__card-description">The Park at Wild Horse Pass</p>
+              <div class="tours__card-ticket">
+                <h3>Apr 02 2021</h3>
+                <a href="#">Tickets</a>
+              </div>
+            </div>
+  
+            <div class="tours__card">
+              <img class="tours__card-img" src="images/tours/ibiza_01.png" alt="Chandler">
+              <h3 class="tours__card-place">Ibiza, IBZ</h3>
+              <p class="tours__card-description">Swag Ibiza Club</p>
+              <div class="tours__card-ticket">
+                <h3>Jul 08 2021</h3>
+                <a href="#">Tickets</a>
+              </div>
+            </div>
+  
+            <div class="tours__card">
+              <img class="tours__card-img" src="images/tours/ibiza_02.png" alt="Chandler">
+              <h3 class="tours__card-place">Ibiza, IBZ</h3>
+              <p class="tours__card-description">El Swing Ibiza</p>
+              <div class="tours__card-ticket">
+                <h3>Jul 10 2021</h3>
+                <a href="#">Tickets</a>
+              </div>
+            </div>
+          </div>
+        </section>
         
       </main>
-      <footer></footer>
-      
-    </div>
   
+      <!--=============== FOOTER ===============-->
+      <footer class="footer" id="contacts">
+        <div class="footer__container _container">
+          <a class="footer__logo" href="#home">
+            <img src="images/footer/logo-icon.png" alt="Logo icon">
+            <img src="images/footer/logo-title.png" alt="Logo title">
+          </a>
+          
+          <div class="footer__contact">
+            <h3 class="footer__contact-name">Artist Management: EMAIL:</h3>
+            <p class="footer__contact-content">Jake Henny<a  href="mailto: jake@brightlightsofficial.com">jake@brightlightsofficial.com</a></p>
+          </div>
+  
+          <div class="footer__platforms">
+            <a href="https://music.apple.com/us/browse" target="_blank"><img class="footer__platforms-item" src="images/footer/apple.svg" alt="Apple music"></a>
+            <a href="https://open.spotify.com/" target="_blank"><img class="footer__platforms-item" src="images/footer/spotify.svg" alt="Spotify"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img class="footer__platforms-item" src="images/footer/instagram.svg" alt="Instagram"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img class="footer__platforms-item" src="images/footer/youtube.svg" alt="Youtube"></a>
+            <a href="https://twitter.com/" target="_blank"><img class="footer__platforms-item" src="images/footer/twitter.svg" alt="Twitter"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img class="footer__platforms-item" src="images/footer/facebook.svg" alt="Facebook"></a>
+          </div>
+          
+          <p class="footer__copywriting">© 2020 DJ bright lights.</p>
+        </div>
+      </footer>
+      
+    </div> <!-- .wrapper -->
+    
     <script src="main.js"></script>
   </body>
 </html>

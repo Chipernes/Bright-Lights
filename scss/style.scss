@@ -740,7 +740,6 @@ h1, h2, h3{
 /*=============== MEDIA ===============*/
 .media {
   padding-top: 14.4rem;
-  margin-bottom: 200px;
 
   @media (max-width: 769px) {
     & {
@@ -755,6 +754,7 @@ h1, h2, h3{
 
     &-item {
       position: relative;
+      overflow: hidden;
 
       & img {
         width: 100%;
@@ -767,6 +767,7 @@ h1, h2, h3{
         position: absolute;
         top: 50%;
         left: 0;
+        z-index: 1;
 
         display: flex;
         justify-content: center;
@@ -786,21 +787,29 @@ h1, h2, h3{
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 1;
 
         width: 100%;
         height: 100%;
 
         background-color: #000000;
         opacity: 0;
+
+        transition: 0.3s;
       }
 
       &:hover {
+
         &::before {
-          opacity: 0.8;
+          opacity: 0.7;
         }
 
         & p {
           opacity: 1;
+        }
+
+        & img {
+          transform: scale(1.3);
         }
       }
     }
@@ -905,6 +914,192 @@ h1, h2, h3{
 
       &-item.fifth {
         display: none;
+      }
+    }
+  }
+}
+
+
+/*=============== TOURS ===============*/
+.tours {
+  padding-top: 14.4rem;
+
+  @media (max-width: 1024px) {
+    & {
+      padding-top: 7rem;
+    }
+  }
+
+  @media (max-width: 769px) {
+    & {
+      padding-top: 5rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+    @media (max-width: 1200px) {
+      & {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__card {
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+
+    font-size: var(--h3-font-size);
+
+    background-color: var(--primary-2);
+    border-radius: 2rem 0;
+    overflow: hidden;
+
+    @media (max-width: 790px) {
+      & {
+        max-width: 300px;
+      }
+    }
+
+    &-place {
+      margin: 30px 0 0 35px;
+      opacity: 0.5;
+    }
+
+    &-description {
+      margin: 20px 0 30px 35px;
+    }
+
+    &-ticket {
+      display: flex;
+      justify-content: center;
+
+      & h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 50%;
+        height: 60px;
+
+        text-transform: uppercase;
+
+        opacity: 0.5;
+      }
+
+      & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 50%;
+        height: 60px;
+
+        text-transform: uppercase;
+        font-weight: var(--font-bold);
+        color: var(--white-color);
+
+        background-color: var(--primary-1);
+
+        border-radius: 2rem 0;
+
+        &:hover {
+          color: var(--primary-1);
+          background-color: var(--white-color);
+        }
+      }
+    }
+  }
+}
+
+
+/*=============== FOOTER ===============*/
+.footer {
+  padding-top: 14.4rem;
+  padding-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    & {
+      padding-top: 7rem;
+    }
+  }
+
+  @media (max-width: 769px) {
+    & {
+      padding-top: 5rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &-name {
+      width: 100%;
+      max-width: 220px;
+
+      text-align: right;
+      line-height: 27 / 18 * 100%;
+      font-size: var(--h2-font-size);
+    }
+
+    &-content {
+      width: 100%;
+      max-width: 320px;
+
+      text-align: left;
+      line-height: 27 / 18 * 100%;
+      font-size: var(--h2-font-size);
+
+      & a {
+        display: inline-block;
+        color: var(--white-color);
+      }
+    }
+
+    @media (max-width: 626px) {
+      &-name, &-content {
+        text-align: center;
+      }
+    }
+  }
+
+  &__platforms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 38px;
+
+    &-item {
+      padding: 10px;
+      background-color: var(--primary-1);
+
+      border-radius: 50%;
+      outline: 8px solid var(--primary-2);
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
       }
     }
   }
