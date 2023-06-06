@@ -136,6 +136,11 @@ body {
   color: var(--white-color);
 }
 
+@media (max-width: 830px) {
+  body.lock {
+    overflow: hidden;
+  }
+}
 h1, h2, h3 {
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
@@ -167,7 +172,14 @@ h1, h2, h3 {
   z-index: var(--z-fixed);
   padding: 0.5rem 0;
 }
-.header-scroll {
+.header-scroll::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
   background-color: rgb(122, 102, 204);
   box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
 }
@@ -181,6 +193,8 @@ h1, h2, h3 {
   height: var(--header-height);
 }
 .nav__logo {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -200,18 +214,81 @@ h1, h2, h3 {
 .nav__burger {
   display: none;
 }
-.nav__burger img {
-  width: 3.75rem;
-}
 @media (max-width: 830px) {
   .nav__burger {
+    position: relative;
+    z-index: 2;
     display: block;
+    width: 40px;
+    height: 30px;
+  }
+  .nav__burger::before, .nav__burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .nav__burger span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+  }
+  .nav__burger.active span {
+    transform: scale(0);
+  }
+  .nav__burger::before {
+    top: 0;
+  }
+  .nav__burger.active::before {
+    transform: rotate(45deg);
+    top: 14px;
+  }
+  .nav__burger::after {
+    bottom: 0;
+  }
+  .nav__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 14px;
+  }
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 43, 43, 0.9);
+    overflow: auto;
+  }
+  .nav__menu.active {
+    top: 0;
   }
   .nav__list {
-    display: none;
+    display: block;
+    padding-top: 100px;
+    text-align: center;
+  }
+  .nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: var(--h1-font-size);
   }
   .nav__container {
     gap: 0.75rem;
+  }
+}
+@media (max-width: 350px) {
+  .nav._container {
+    padding: 0 1em;
   }
 }
 

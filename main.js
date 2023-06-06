@@ -5,3 +5,10 @@ function scrollHeader(){
     if(this.scrollY >= 100) header.classList.add('header-scroll'); else header.classList.remove('header-scroll')
 }
 window.addEventListener('scroll', scrollHeader)
+
+$(document).ready(function () {
+ $('.nav__burger').click(function (event) {
+    $('.nav__burger, .nav__menu').toggleClass('active');
+    $('body').toggleClass('lock');
+ });
+});
